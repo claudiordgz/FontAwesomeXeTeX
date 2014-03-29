@@ -1,17 +1,13 @@
-% FontAwesome (https://github.com/claudiordgz/FontAwesomeXeTeX) bindings for (Xe)LaTeX
-% Author: Claudio Rodríguez <claudio.rdgz@gmail.com>
+% FontAwesome (http://fortawesome.github.com/Font-Awesome/) bindings for (Xe)LaTeX
+% Author: Honza Ustohal
 %
 % Translation of FontAwesome's private range characters into XeTeX symbols. All icons are camel-cased and prefixed with 'fa', i.e. what was .icon-align-center the CSS version of FontAwesome becomes \faAlignCenter
-% This has been taken from (http://fortawesome.github.com/Font-Awesome/) by Honza Ustohal
 %
 % Prerequisite:
 % XeLaTeX, because of fontspec FontAwesome installed as a system font accessible by XeLaTeX
 %
 % Usage:
-% 1. Save this into your project folder as fontawesome.sty
-% 2. Put \usepackage{fontawesome} into the preamble
-% 3. Define command for FontAwesome: \newfontfamily{\FA}{FontAwesome.otf}
-% 4. Redefine required characters (optional): \def\twitter{{\FA \faTwitter}}
+% 1. \usepackage{fontawesome.sty}
 
 \RequirePackage{fontspec}
 
@@ -384,7 +380,7 @@
 \def\faVimeoSquare{\symbol{"F194}}
 \def\faTry{\symbol{"F195}}
 
-\newfontfamily{\FA}{FontAwesome.otf}
+\newfontfamily{\FA}[Path = fonts/]{FontAwesome.otf}
 
 \def\glass{{\FA \faGlass}}
 \def\music{{\FA \faMusic}}
